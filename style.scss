@@ -1,0 +1,85 @@
+@import "./css/_reset.scss";
+@import "./css/_variables.scss";
+@import "./css/_mixin.scss";
+
+*{
+	font-family: $firstFont;
+}
+
+.calculator {
+    max-width: 352px;
+    padding: 15px 19px;
+    background-color: $background;
+    margin: 0 auto;
+
+    &__display {
+        width: 100%;
+        border-bottom: 1px solid $line;
+    }
+
+    &__display-input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: transparent;
+        color: $white;
+        font-size: calculator-rem(48);
+        text-align:end;
+        padding: 0;
+    }
+
+    &__display-result{
+        color: $ligth-grey;
+        text-align: end;
+        margin-top: 80px;
+        font-size: calculator-rem(48);
+    }
+
+    &__display-callback {
+        width: 24px;
+        margin: 20px 0;
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        margin-top: 25px;
+        
+        &--button {
+            background-color: $grey;
+            width: 73px;
+            height: 75px;
+            border-radius: 9px;
+            border: none;
+            font-size: calculator-rem(36);
+            color: $white;
+
+            &:hover {
+                background-color: lighten($grey, 30%);
+            }
+        }
+
+        &--button-color-green {
+            color: $green;
+        }
+
+        &--button:first-child {
+            background-color: $red;
+            color: $grey;
+
+            &:hover {
+                background-color: lighten($red, 10%)
+            }
+        }
+
+        &--button:last-child {
+            background-color: $green;
+            color: $grey;
+
+            &:hover {
+                background-color: lighten($green, 20%)
+            }
+        }
+    }
+}
