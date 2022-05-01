@@ -76,7 +76,7 @@ $resultButton.addEventListener('click', function(){
     }
 
     console.log(result)
-    $result.textContent = eval(result)
+    $result.textContent = eval(result).toFixed(2)
     // $result.textContent = calculateConvertToNumber (Não funciona pq os operadores estão como string)
 })
 
