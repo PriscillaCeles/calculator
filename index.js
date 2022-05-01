@@ -69,14 +69,10 @@ $resultButton.addEventListener('click', function(){
     if(multiply){
         result = $displayInput.value.replace('×',"*")
         multiply = false
-        console.log(result)
-        console.log(multiply)
     } 
     if (division){
         result = $displayInput.value.replace('÷', '/')
         division = false
-        console.log(result)
-        console.log(division)
     }
 
     console.log(result)
