@@ -10,39 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
     <title>Calculadora</title>
 </head>
 
 <body>
     <article class="calculator calculator-container">
         <div class="calculator__display">
-            <input type="text" class="calculator__display-input" value="2+7">
-            <div class="calculator__display-result">9</div>
+            <input type="text" class="calculator__display-input">
+            <div class="calculator__display-result">0</div>
             <img class="calculator__display-callback" src="./assets/callback.png"
                 alt="Ícone de seta em formato circular"
                 title="Ícone branco de seta em formato circular com ponteiros de minos e segundos no centro">
         </div>
         <div class="calculator__buttons">
-            <button class="calculator__buttons--button">C</button>
-            <button class="calculator__buttons--button calculator__buttons--button-color-green">()</button>
-            <button class="calculator__buttons--button calculator__buttons--button-color-green">%</button>
-            <button class="calculator__buttons--button calculator__buttons--button-color-green">&#247</button>
-            <button class="calculator__buttons--button">7</button>
-            <button class="calculator__buttons--button">8</button>
-            <button class="calculator__buttons--button">9</button>
-            <button class="calculator__buttons--button calculator__buttons--button-color-green">&#215</button>
-            <button class="calculator__buttons--button">4</button>
-            <button class="calculator__buttons--button">5</button>
-            <button class="calculator__buttons--button">6</button>
-            <button class="calculator__buttons--button calculator__buttons--button-color-green">-</button>
-            <button class="calculator__buttons--button">1</button>
-            <button class="calculator__buttons--button">2</button>
-            <button class="calculator__buttons--button">3</button>
-            <button class="calculator__buttons--button calculator__buttons--button-color-green">+</button>
+            <button class="calculator__buttons--button calculator__buttons--reset">C</button>
+            <button class="calculator__buttons--button calculator__buttons--button-color-green calculator__buttons--operation-parenthesis">()</button>
+            <button class="calculator__buttons--button calculator__buttons--button-color-green calculator__buttons--operation-percentage">%</button>
+            <button class="calculator__buttons--button calculator__buttons--button-color-green calculator__buttons--operation calculator__buttons--operation-divi">&#247</button>
+            <button class="calculator__buttons--button calculator__buttons--number">7</button>
+            <button class="calculator__buttons--button calculator__buttons--number">8</button>
+            <button class="calculator__buttons--button calculator__buttons--number">9</button>
+            <button class="calculator__buttons--button calculator__buttons--button-color-green calculator__buttons--operation calculator__buttons--operation-mult">&#215</button>
+            <button class="calculator__buttons--button calculator__buttons--number">4</button>
+            <button class="calculator__buttons--button calculator__buttons--number">5</button>
+            <button class="calculator__buttons--button calculator__buttons--number">6</button>
+            <button class="calculator__buttons--button calculator__buttons--button-color-green calculator__buttons--operation calculator__buttons--operation-sub">-</button>
+            <button class="calculator__buttons--button calculator__buttons--number">1</button>
+            <button class="calculator__buttons--button calculator__buttons--number">2</button>
+            <button class="calculator__buttons--button calculator__buttons--number">3</button>
+            <button class="calculator__buttons--button calculator__buttons--button-color-green calculator__buttons--operation calculator__buttons--operation-sum">+</button>
             <button class="calculator__buttons--button">+/-</button>
-            <button class="calculator__buttons--button">0</button>
+            <button class="calculator__buttons--button calculator__buttons--number">0</button>
             <button class="calculator__buttons--button">.</button>
-            <button class="calculator__buttons--button">=</button>
+            <button class="calculator__buttons--button calculator__buttons--result">=</button>
         </div>
     </article>
 </body>

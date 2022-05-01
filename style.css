@@ -85,6 +85,7 @@ table {
   text-align: end;
   margin-top: 80px;
   font-size: 3rem;
+  min-height: 48px;
 }
 
 .calculator__display-callback {
