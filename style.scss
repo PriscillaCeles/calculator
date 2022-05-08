@@ -13,6 +13,7 @@
     margin: 0 auto;
     border-radius: 20px;
     margin-top: 10px;
+    transition: 300ms;
 
     &__display {
         width: 100%;
@@ -103,7 +104,7 @@
     
     position: fixed;
     top: 29px;
-    transition: 0.25s;
+    transition: 300ms;
 
     &--close {
         width: 15px;
@@ -112,13 +113,13 @@
 
     &--text-calc {
         text-align: end;
-        font-size: 25px;
+        font-size: 36px;
         font-weight: 500;
 
     }
 
     &--text-result {
-        font-size: 35px;
+        font-size: 48px;
         font-weight: 700;
     }
 }

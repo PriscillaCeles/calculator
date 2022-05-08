@@ -1,25 +1,21 @@
 //* CONSTANTS
 const $buttonsNumber = document.querySelectorAll(".calculator__buttons--number");
 const $buttonsMathOperations = document.querySelectorAll(".calculator__buttons--operation");
-
 const $buttonCallback = document.querySelector(".calculator__display-callback");
 const $memory = document.querySelector(".calculator__memory");
 const $textMemory = document.querySelector(".calculator__memory--text-calc");
 const $resultMemory = document.querySelector(".calculator__memory--text-result");
 const $closeCallback = document.querySelector(".calculator__memory--close");
-
 const $buttonParenthesis = document.querySelector(".calculator__buttons--operation-parenthesis");
 const $buttonPercentage = document.querySelector(".calculator__buttons--operation-percentage");
 const $buttonSignal = document.querySelector(".calculator__buttons--signal");
-
 const $displayInput = document.querySelector(".calculator__display-input");
-
 const $result = document.querySelector(".calculator__display-result");
-
 const $resultButton = document.querySelector(".calculator__buttons--result");
 const $resetButton = document.querySelector(".calculator__buttons--reset");
 
-//* VARIABLES
+//* VARIABLES *\\
+
 let calculateConvertToNumber = 0;
 let parenthesis = false;
 let result = 0;
@@ -28,7 +24,8 @@ let callbackMemory = []
 let calc = ''
 let finalResult = ''
 
-//* FUNCTIONS
+//* FUNCTIONS *\\
+
 function printMemory() {
   if(calc != '' && finalResult != ''){
     $textMemory.innerHTML = calc + '='
@@ -60,6 +57,7 @@ function getResult() {
     result = result.split(" ");
     $result.textContent = Number(result[0]) - Number(result[1]);
   }
+
   operation = false
 
   calc = $displayInput.value
@@ -67,7 +65,8 @@ function getResult() {
   callbackMemory.push( calc, finalResult)
 }
 
-//* NUMBER 
+//* NUMBER *\\
+
 $buttonsNumber.forEach(function ($button) {
   $button.addEventListener("click", function () {
     $displayInput.value = $displayInput.value + $button.textContent;
@@ -76,7 +75,8 @@ $buttonsNumber.forEach(function ($button) {
   });
 });
 
-//* OPERATIONS
+//* OPERATIONS *\\
+
 $buttonsMathOperations.forEach(function ($button) {
   $button.addEventListener("click", function () {
     if(!operation){
@@ -92,7 +92,8 @@ $buttonsMathOperations.forEach(function ($button) {
   });
 });
 
-//* PARENTHESIS
+//* PARENTHESIS *\\
+
 $buttonParenthesis.addEventListener("click", function () {
   if (!parenthesis) {
     $displayInput.value = $displayInput.value + "(";
@@ -100,28 +101,32 @@ $buttonParenthesis.addEventListener("click", function () {
     $displayInput.value = $displayInput.value + ")";
   }
   parenthesis = !parenthesis;
+  operation = false
 });
 
-//* PERCENTAGE
+//* PERCENTAGE *\\
+
 $buttonPercentage.addEventListener("click", function () {
   result = Number($result.textContent) * 100;
   $result.textContent = result + "%";
 });
 
-//* SIGNAL +/-
+//* SIGNAL +/- *\\
+
 $buttonSignal.addEventListener("click", function () {
   $result.textContent = $result.textContent * -1;
 });
 
-//* RESULT
+//* RESULT *\\
+
 $resultButton.addEventListener("click", function () {
   getResult()
 
   $displayInput.value = "";
-  // $result.textContent = eval(result)
 });
 
-//* RESET BUTTON
+//* RESET BUTTON *\\
+
 $resetButton.addEventListener("click", function () {
   $displayInput.value = "";
   $result.textContent = "0";
@@ -129,7 +134,8 @@ $resetButton.addEventListener("click", function () {
   operation = false;
 });
 
-//* CALLBACK MEMORY
+//* CALLBACK MEMORY *\\
+
 $buttonCallback.addEventListener("click", function () {
   $memory.classList.toggle('close')
   printMemory()

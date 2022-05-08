@@ -64,6 +64,8 @@ table {
   margin: 0 auto;
   border-radius: 20px;
   margin-top: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .calculator__display {
@@ -163,8 +165,8 @@ table {
   color: #FFFFFF;
   position: fixed;
   top: 29px;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .calculator__memory--close {
@@ -174,12 +176,12 @@ table {
 
 .calculator__memory--text-calc {
   text-align: end;
-  font-size: 25px;
+  font-size: 36px;
   font-weight: 500;
 }
 
 .calculator__memory--text-result {
-  font-size: 35px;
+  font-size: 48px;
   font-weight: 700;
 }
 
