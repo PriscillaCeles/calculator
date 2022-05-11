@@ -1,4 +1,4 @@
-//* CONSTANTS
+//#region //* CONSTANTS
 const $buttonsNumber = document.querySelectorAll(".calculator__buttons--number");
 const $buttonsMathOperations = document.querySelectorAll(".calculator__buttons--operation");
 const $buttonCallback = document.querySelector(".calculator__display-callback");
@@ -13,9 +13,9 @@ const $displayInput = document.querySelector(".calculator__display-input");
 const $result = document.querySelector(".calculator__display-result");
 const $resultButton = document.querySelector(".calculator__buttons--result");
 const $resetButton = document.querySelector(".calculator__buttons--reset");
+//#endregion
 
 //* VARIABLES *\\
-
 let calculateConvertToNumber = 0;
 let parenthesis = false;
 let result = 0;
